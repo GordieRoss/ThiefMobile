@@ -6,6 +6,12 @@ var DoorOpen = 0;
 var DoorSpeed = 0.100;
 var hit : RaycastHit;
 
+// Object containing DoorLock System
+var DoorLock : GameObject;
+//Object Containing Character Stuff
+var CharacterStuff : GameObject;
+var CharacterStuffMobile : GameObject;
+
 function Start () {
 
 }
@@ -49,11 +55,32 @@ GameObject.Find("Hinge"+hit.collider.name).transform.localEulerAngles.y = 0;
 }
 Debug.Log(hit.collider.tag);
 
-if(hit.collider.tag == "Handle")
+if(hit.collider.tag == "Handle" || hit.collider.tag == "LockedDoor" )
 gameObject.GetComponent(GUIText).guiText.text = GameObject.Find("Hinge"+hit.collider.name).transform.localEulerAngles.y.ToString() + " " + DoorOpen.ToString();
 
 
+if(hit.collider.tag == "LockedDoor"){
+
+if (Input.GetMouseButtonDown(0)){
+
+//Set Door Pick Stuff to active
+DoorLock.SetActive(true);
+
+//Set Character Stuff to not active
+CharacterStuff.SetActive(false);
+CharacterStuffMobile.SetActive(false);
+
 }
+
+
+}
+
+
+}
+
+
+
+
 
 }
 

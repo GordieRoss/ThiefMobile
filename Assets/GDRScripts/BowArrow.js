@@ -19,15 +19,13 @@ ReloadCounter = ReloadCounter-1;
 //Made it a lateupdate, so it has the latest collider to deal with.. so it does not fire an arrow by using the previously hit(raycast)collider 
 function LateUpdate () {
 
-// if bow active
-// if arrows > 0
-//if mousedown
-
 
 RayCastObjectFromMouse = GameObject.Find("RayCaster").GetComponent(RayCasting).hit;
 
 //Check the Raycast Object name
-if (Input.GetMouseButtonDown(0) && RayCastObjectFromMouse.collider.name == "BowMeshHitZone" && ReloadCounter <0){
+if (Input.GetMouseButtonDown(0) && RayCastObjectFromMouse.collider.name == "BowMeshHitZone" && ReloadCounter <0 && GameObject.Find("INVENTORY").GetComponent(Inventory).Arrows>0){
+GameObject.Find("INVENTORY").GetComponent(Inventory).Arrows = GameObject.Find("INVENTORY").GetComponent(Inventory).Arrows-1;
+
 //Reset the Reload counter
 ReloadCounter = ArrowReloadFixedFrames;
 
@@ -36,7 +34,7 @@ PretendArrow.SetActive(false);
 
 var ArrowClone = Instantiate (Arrow, gameObject.transform.position, gameObject.transform.rotation);
 ArrowClone.SetActive(true);
-ArrowClone.collider.isTrigger = false;
+//ArrowClone.collider.isTrigger = false;
 ArrowClone.rigidbody.isKinematic = false;
 ArrowClone.rigidbody.AddRelativeForce(0,0,BowPower,ForceMode.Impulse);
 
@@ -48,7 +46,14 @@ ArrowClone.rigidbody.AddRelativeForce(0,0,BowPower,ForceMode.Impulse);
 
 //Show Arrow so that player knows the bow has reloaded
 if(ReloadCounter < 0){
+if (GameObject.Find("INVENTORY").GetComponent(Inventory).Arrows<0){
+PretendArrow.SetActive(false);
+}
+if (GameObject.Find("INVENTORY").GetComponent(Inventory).Arrows >0){
 PretendArrow.SetActive(true);
 }
+
+}
+
 
 }

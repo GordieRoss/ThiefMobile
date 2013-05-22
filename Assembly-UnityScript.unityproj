@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{90FC0003-CC57-F015-29E8-E64C21B4CAD8}</ProjectGuid>
+	<ProjectGuid>{C5E2B3D4-8074-8E05-0214-0DCE76355DC5}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -45,11 +45,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AutoQualityChooser\AutoQualityChooser.js" />
-     <Compile Include="Assets\DogRunForward.js" />
+     <Compile Include="Assets\GDRScripts\BacktoController.js" />
      <Compile Include="Assets\GDRScripts\BowArrow.js" />
+     <Compile Include="Assets\GDRScripts\DogRunForward.js" />
      <Compile Include="Assets\GDRScripts\DoorOpen.js" />
      <Compile Include="Assets\GDRScripts\FPS.js" />
      <Compile Include="Assets\GDRScripts\RayCasting.js" />
+     <Compile Include="Assets\GiveMeattoDog.js" />
+     <Compile Include="Assets\Inventory.js" />
+     <Compile Include="Assets\PickMovement.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />
@@ -160,9 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{3C344F0C-A170-C4BA-D153-01C9C9B41991}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{4CC6A0B6-FD07-C0C5-227B-8889F23E78AB}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{33329F4D-BEFA-4D0E-3DB5-3D83BC61D7C1}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{7F9295E9-69AB-52FC-5D7E-6A78ABDFD685}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

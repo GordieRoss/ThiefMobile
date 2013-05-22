@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GDRScripts\BowArrow.js">
+    <Files>
+      <File FileName="Assets\Inventory.js" Line="40" Column="18" />
+      <File FileName="Assets\GiveMeattoDog.js" Line="26" Column="44" />
+      <File FileName="Assets\GDRScripts\BowArrow.js" Line="36" Column="28" />
+      <File FileName="Assets\GDRScripts\DogRunForward.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
