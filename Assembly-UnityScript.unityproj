@@ -50,10 +50,11 @@
      <Compile Include="Assets\GDRScripts\DogRunForward.js" />
      <Compile Include="Assets\GDRScripts\DoorOpen.js" />
      <Compile Include="Assets\GDRScripts\FPS.js" />
+     <Compile Include="Assets\GDRScripts\GiveMeattoDog.js" />
+     <Compile Include="Assets\GDRScripts\Inventory.js" />
+     <Compile Include="Assets\GDRScripts\PickMovement.js" />
      <Compile Include="Assets\GDRScripts\RayCasting.js" />
-     <Compile Include="Assets\GiveMeattoDog.js" />
-     <Compile Include="Assets\Inventory.js" />
-     <Compile Include="Assets\PickMovement.js" />
+     <Compile Include="Assets\GDRScripts\UnlockDoor.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />

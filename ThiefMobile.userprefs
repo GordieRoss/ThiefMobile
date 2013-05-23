@@ -1,11 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GDRScripts\BowArrow.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GDRScripts\Inventory.js">
     <Files>
-      <File FileName="Assets\Inventory.js" Line="40" Column="18" />
-      <File FileName="Assets\GiveMeattoDog.js" Line="26" Column="44" />
-      <File FileName="Assets\GDRScripts\BowArrow.js" Line="36" Column="28" />
+      <File FileName="Assets\GDRScripts\UnlockDoor.js" Line="21" Column="2" />
+      <File FileName="Assets\GDRScripts\BowArrow.js" Line="1" Column="1" />
       <File FileName="Assets\GDRScripts\DogRunForward.js" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\GDRScripts\BacktoController.js" Line="35" Column="1" />
+      <File FileName="Assets\GDRScripts\Inventory.js" Line="26" Column="28" />
+      <File FileName="Assets\GDRScripts\GiveMeattoDog.js" Line="18" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
