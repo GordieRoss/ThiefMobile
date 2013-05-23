@@ -23,7 +23,7 @@ function LateUpdate () {
 
 RayCastObjecttoCollect = GameObject.Find("RayCaster").GetComponent(RayCasting).hit;
 
-if (Input.GetMouseButton(0)){
+if (Input.GetMouseButtonDown(0)){
 
 if (RayCastObjecttoCollect.collider.name == "BOWPOWERUP"){
 //Set the Bow Functionality to active
