@@ -19,7 +19,7 @@ RayCastObjectTapDog = GameObject.Find("RayCaster").GetComponent(RayCasting).hit;
 
 if (Input.GetMouseButtonDown(0)&& Inv.gameObject.GetComponent(Inventory).Meat >= 1 && GameObject.Find("DOG").transform.position.z >= GameObject.Find("DogEndPosition").transform.position.z){
 
-if (RayCastObjectTapDog.collider.name == "DOGCollision"){
+if (RayCastObjectTapDog.collider.name == "DOGHEAD"){
 Inv.gameObject.GetComponent(Inventory).Meat = Inv.gameObject.GetComponent(Inventory).Meat -1;
 
 GUIMeat.SetActive(true);
@@ -27,7 +27,7 @@ GameObject.Find("DOGSFX").SetActive(false);
 
 counter = DogEatTime;
 //Destroy the Pickup
-Destroy(RayCastObjectTapDog.collider.gameObject);
+Destroy(GameObject.Find("DOGCollision"));
 }
 
 }//End Mouse Condition

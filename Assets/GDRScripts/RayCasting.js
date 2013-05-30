@@ -11,6 +11,8 @@ var DoorLock : GameObject;
 //Object Containing Character Stuff
 var CharacterStuff : GameObject;
 var CharacterStuffMobile : GameObject;
+var QUITGUI : GameObject;
+var Inventory : GameObject;
 
 function Start () {
 
@@ -49,6 +51,7 @@ if (DoorOpen == 1){
 GameObject.Find("Hinge"+hit.collider.name).transform.localEulerAngles.y = 0;
 }
 
+
 }
 
 
@@ -62,6 +65,8 @@ gameObject.GetComponent(GUIText).guiText.text = GameObject.Find("Hinge"+hit.coll
 if(hit.collider.tag == "LockedDoor"){
 
 if (Input.GetMouseButtonDown(0)){
+//turn off inventory access
+Inventory.SetActive(false);
 
 //Set Door Pick Stuff to active
 DoorLock.SetActive(true);
@@ -72,6 +77,26 @@ CharacterStuffMobile.SetActive(false);
 
 }
 
+}
+
+if(hit.collider.name == "QUIT"){
+
+if (Input.GetMouseButtonDown(0)){
+Inventory.SetActive(false);
+QUITGUI.SetActive(true);
+GameObject.Find("Player").GetComponent(FirstPersonControl).enabled = false;
+
+}
+
+}
+
+if(hit.collider.name == "FlourZone"){
+
+if (Input.touchCount >0){
+
+GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.maxEmission = GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.maxEmission -0.01;
+GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.minEmission = GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.minEmission -0.01;
+}
 
 }
 

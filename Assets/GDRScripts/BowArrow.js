@@ -5,6 +5,7 @@ var ArrowReloadFixedFrames = 60;
 var ReloadCounter = 0;
 var BowPower = 10;
 var RayCastObjectFromMouse : RaycastHit;
+var BowSound: AudioSource;
 
 function Start () {
 ReloadCounter = ArrowReloadFixedFrames;
@@ -37,6 +38,9 @@ ArrowClone.SetActive(true);
 //ArrowClone.collider.isTrigger = false;
 ArrowClone.rigidbody.isKinematic = false;
 ArrowClone.rigidbody.AddRelativeForce(0,0,BowPower,ForceMode.Impulse);
+BowSound.PlayOneShot(BowSound.clip,BowSound.volume);
+Handheld.Vibrate ();
+
 
 }
 //Debug.Log(RayCastObjectFromMouse.collider.name);

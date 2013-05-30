@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;UNITY_ANDROID_API;ENABLE_CLOTH;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;UNITY_ANDROID_API;ENABLE_CLOTH;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_3;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -45,16 +45,22 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AutoQualityChooser\AutoQualityChooser.js" />
+     <Compile Include="Assets\FlourSwipe.js" />
      <Compile Include="Assets\GDRScripts\BacktoController.js" />
      <Compile Include="Assets\GDRScripts\BowArrow.js" />
+     <Compile Include="Assets\GDRScripts\CancelQuit.js" />
      <Compile Include="Assets\GDRScripts\DogRunForward.js" />
      <Compile Include="Assets\GDRScripts\DoorOpen.js" />
+     <Compile Include="Assets\GDRScripts\DrawTexture.js" />
      <Compile Include="Assets\GDRScripts\FPS.js" />
      <Compile Include="Assets\GDRScripts\GiveMeattoDog.js" />
      <Compile Include="Assets\GDRScripts\Inventory.js" />
      <Compile Include="Assets\GDRScripts\PickMovement.js" />
+     <Compile Include="Assets\GDRScripts\QuitGameButton.js" />
      <Compile Include="Assets\GDRScripts\RayCasting.js" />
+     <Compile Include="Assets\GDRScripts\ScalableText.js" />
      <Compile Include="Assets\GDRScripts\UnlockDoor.js" />
+     <Compile Include="Assets\GameInventoryToggle.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />
@@ -99,6 +105,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\Fonts\SableLion\sable.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />

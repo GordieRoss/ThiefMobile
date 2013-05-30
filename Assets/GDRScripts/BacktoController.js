@@ -6,6 +6,7 @@ public var StartGameBtnYSize =.1;
 var CharacterStuff :GameObject;
 var CharacterStuffMobile :GameObject;
 var DoorLockStuff : GameObject;
+var Inventory : GameObject;
 
 var CustomButton : GUIStyle;
 
@@ -27,6 +28,8 @@ function OnGUI() {
         
        if (BacktoCharacterBtn)
     {
+//Turn the inventory back on
+Inventory.SetActive(true);
     //    Set Doorlock stuff inactive
 DoorLockStuff.SetActive(false);
 //    Set Character controller active

@@ -1,13 +1,18 @@
 #pragma strict
 var RayCastObjecttoCollect : RaycastHit;
-
+var TextCounter = 60;
 var Meat = 0;
 var Crossbow = false;
 var Arrows = 5;
 var Treasure =0;
 var CrossBOW : GameObject;
 var GameEnd : GameObject;
-
+var counter = 0;
+var PickUpGUI : GameObject;
+var str = "empty";
+var Meattext :  GameObject;
+var Arrowtext : GameObject;
+var Treasuretext : GameObject;
 
 function Start () {
 
@@ -15,7 +20,8 @@ function Start () {
 
 
 function FixedUpdate(){
-
+//Display Gui text for a set amount of time.
+DisplayGUIPickups();
 
 }
 
@@ -25,6 +31,7 @@ RayCastObjecttoCollect = GameObject.Find("RayCaster").GetComponent(RayCasting).h
 
 if (Input.GetMouseButtonDown(0)){
 
+
 if (RayCastObjecttoCollect.collider.name == "BOWPOWERUP"){
 //Set the Bow Functionality to active
 Crossbow = true;
@@ -33,6 +40,8 @@ Destroy(RayCastObjecttoCollect.collider.gameObject);
 CrossBOW.SetActive(true);
 //Turn off the dog for the demo to stop people trying to shoot it
 GameObject.Find("dog_doberman").SetActive(false);
+counter = TextCounter;
+str = "CrossBow";
 }
 
 if (RayCastObjecttoCollect.collider.name == "MEAT"){
@@ -41,6 +50,8 @@ Meat = Meat+1;
 
 //Destroy Pickup
 Destroy(RayCastObjecttoCollect.collider.gameObject);
+counter = TextCounter;
+str = "Meat";
 }
 
 if (RayCastObjecttoCollect.collider.name == "Arrow(Clone)"){
@@ -48,6 +59,8 @@ if (RayCastObjecttoCollect.collider.name == "Arrow(Clone)"){
 Arrows = Arrows+1;
 //Destroy Pickup
 Destroy(RayCastObjecttoCollect.collider.gameObject);
+counter = TextCounter;
+str = "Arrow";
 }
 
 if (RayCastObjecttoCollect.collider.name == "TREASURE"){
@@ -55,10 +68,38 @@ if (RayCastObjecttoCollect.collider.name == "TREASURE"){
 Treasure = Treasure+1;
 //Destroy Pickup
 Destroy(RayCastObjecttoCollect.collider.gameObject);
-if (Treasure >= 1)
+if (Treasure >= GameObject.FindGameObjectsWithTag("Treasure").Length)
 GameEnd.SetActive(true);
+counter = TextCounter;
+str = "Treasure";
 }
 
 
 }//End of Mouse(0)
+
+PickUpGUI.gameObject.guiText.text = str;
+
 }//End of Late Update
+
+function DisplayGUIPickups(){
+counter = counter -1;
+if (counter <= 0){
+counter = 0;
+//PickUpGUI.gameObject.guiText.font.material.color.a = 0;
+}
+
+
+if (counter >0){
+PickUpGUI.SetActive (true);
+//PickUpGUI.gameObject.guiText.font.material.color.a = (255/counter);
+}
+else{
+PickUpGUI.SetActive (false);
+}
+
+//Update Inventory strings
+Meattext.GetComponent(ScalableText).str = "x"+Meat.ToString();
+Arrowtext.GetComponent(ScalableText).str = "x"+Arrows.ToString();
+Treasuretext.GetComponent(ScalableText).str = "x"+Treasure.ToString();
+
+}
