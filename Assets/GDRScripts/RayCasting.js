@@ -97,8 +97,8 @@ if(hit.collider.name == "FlourZone"){
 
 if (Input.touchCount >0){
 
-GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.maxEmission = GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.maxEmission -0.01;
-GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.minEmission = GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.minEmission -0.01;
+GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.maxEmission = GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.maxEmission -0.03;
+GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.minEmission = GameObject.Find("FlourPlume(Clone)").GetComponent(ParticleEmitter).particleEmitter.minEmission -0.03;
 }
 
 }
