@@ -4,7 +4,7 @@ public var QuitBtnXSize =.1;
 public var QuitBtnYSize =.1;
 var QuitGUI :GameObject;
 var InventoryGUI : GameObject;
-
+var Depth = -1;
 
 var CustomButton : GUIStyle;
 
@@ -13,7 +13,7 @@ var CustomButton : GUIStyle;
 var btnTexture : Texture;
 // Performs GUI actions
 function OnGUI() {
-
+GUI.depth = Depth;
     //checks to make sure there is a button texture
         if (!btnTexture) {
         Debug.LogError("Please assign a texture on the inspector");

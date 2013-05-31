@@ -65,6 +65,9 @@ gameObject.GetComponent(GUIText).guiText.text = GameObject.Find("Hinge"+hit.coll
 if(hit.collider.tag == "LockedDoor"){
 
 if (Input.GetMouseButtonDown(0)){
+//Up the lighting
+GameObject.Find("MainLight").light.intensity = .62;
+
 //turn off inventory access
 Inventory.SetActive(false);
 

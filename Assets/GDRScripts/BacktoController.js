@@ -9,13 +9,13 @@ var DoorLockStuff : GameObject;
 var Inventory : GameObject;
 
 var CustomButton : GUIStyle;
-
+var Depth = -1;
 
 // Main Map Button Texture
 var btnTexture : Texture;
 // Performs GUI actions
 function OnGUI() {
-
+GUI.depth = Depth;
     //checks to make sure there is a button texture
         if (!btnTexture) {
         Debug.LogError("Please assign a texture on the inspector");
@@ -28,6 +28,8 @@ function OnGUI() {
         
        if (BacktoCharacterBtn)
     {
+//Set Lighting Back to normal levels
+GameObject.Find("MainLight").light.intensity = .27;
 //Turn the inventory back on
 Inventory.SetActive(true);
     //    Set Doorlock stuff inactive

@@ -30,11 +30,13 @@ function OnGUI() {
    InvActive = true;
    Inventory.SetActive (true);
    GameObject.Find("Player").GetComponent(FirstPersonControl).enabled = false;
-   }
+   
+     }
    else{
    InvActive = false;
    Inventory.SetActive (false);
    GameObject.Find("Player").GetComponent(FirstPersonControl).enabled = true;
+   
    }
     }
      

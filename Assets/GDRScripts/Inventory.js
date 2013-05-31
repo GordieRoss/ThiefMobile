@@ -13,9 +13,10 @@ var str = "empty";
 var Meattext :  GameObject;
 var Arrowtext : GameObject;
 var Treasuretext : GameObject;
+var TreasureTotal = 0;
 
 function Start () {
-
+TreasureTotal = GameObject.FindGameObjectsWithTag("Treasure").Length;
 }
 
 
@@ -41,7 +42,7 @@ CrossBOW.SetActive(true);
 //Turn off the dog for the demo to stop people trying to shoot it
 GameObject.Find("dog_doberman").SetActive(false);
 counter = TextCounter;
-str = "CrossBow";
+str = "Crossbow";
 }
 
 if (RayCastObjecttoCollect.collider.name == "MEAT"){
@@ -68,10 +69,14 @@ if (RayCastObjecttoCollect.collider.name == "TREASURE"){
 Treasure = Treasure+1;
 //Destroy Pickup
 Destroy(RayCastObjecttoCollect.collider.gameObject);
-if (Treasure >= GameObject.FindGameObjectsWithTag("Treasure").Length)
-GameEnd.SetActive(true);
+
 counter = TextCounter;
 str = "Treasure";
+
+if (Treasure >= TreasureTotal)
+GameEnd.SetActive(true);
+
+
 }
 
 
@@ -98,8 +103,8 @@ PickUpGUI.SetActive (false);
 }
 
 //Update Inventory strings
-Meattext.GetComponent(ScalableText).str = "x"+Meat.ToString();
-Arrowtext.GetComponent(ScalableText).str = "x"+Arrows.ToString();
-Treasuretext.GetComponent(ScalableText).str = "x"+Treasure.ToString();
+Meattext.GetComponent(ScalableText).str = Meat.ToString();
+Arrowtext.GetComponent(ScalableText).str = Arrows.ToString();
+Treasuretext.GetComponent(ScalableText).str = Treasure.ToString();
 
 }
